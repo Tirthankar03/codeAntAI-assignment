@@ -2,6 +2,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Layout from "./routes/layout";
 import Repositories from "./routes/repositories/page";
 import WorkInProgress from "./components/WorkInProgress";
+import Auth from "./routes/auth/page";
 
 function App() {
   const router = createBrowserRouter([
@@ -33,13 +34,12 @@ function App() {
                 path: "support",
                 element: <WorkInProgress />,
             },
-            {
-                path: "logout",
-                element: <WorkInProgress />,
-            },
-
         ],
     },
+    {
+        path: "/auth", 
+        element: <Auth />, 
+      },
 ]);
   return (
         <RouterProvider router={router} />

@@ -20,7 +20,7 @@ const toggleSidebar = () => {
 
 
     return (
-        <header className=" md:hidden sticky z-[100] h-[64px] inset-x-0 top-0 items-center justify-between bg-white px-4 shadow-md transition-all duration-300 ease-linear">
+        <header className=" md:hidden sticky z-[100] h-[64px] inset-x-0 top-0 items-center justify-between bg-white px-4 shadow-sm transition-all duration-300 ease-linear">
         <div className="flex h-[64px] items-center justify-between border-b border-zinc-200">
             <Link to="/" className="flex gap-x-3  items-center justify-center">
             <img src="logo-dark.png" alt="Logoipsum" className="dark:hidden" />
@@ -36,7 +36,7 @@ const toggleSidebar = () => {
         {Open && (
           <>
             <div 
-              className="fixed top-12 left-0 right-0 bottom-0 bg-black opacity-50 z-30" 
+              className="fixed top-12 left-0 right-0 bottom-0 bg-black opacity-15 z-30" 
               onClick={toggleSidebar} 
             />
             <div className="top-12 left-0 w-full absolute bg-white z-40 md:hidden">

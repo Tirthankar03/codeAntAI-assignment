@@ -6,6 +6,52 @@ import { BsGear } from "react-icons/bs";
 import { LuPhone } from "react-icons/lu";
 import { MdOutlineLogout } from "react-icons/md";
 
+export const sassOptions = [
+  {
+    label: "Sign in with Github",
+    path: "github.png",
+  },
+  {
+    label: "Sign in with Bitbucket",
+    path: "bitbucket.png",
+  },
+  {
+    label: "Sign in with Azure Devops",
+    path: "azure.png",
+  },
+  {
+    label: "Sign in with GitLab",
+    path: "gitlab.png",
+  },
+];
+
+export const selfHostedOptions = [
+  {
+    label: "Sign in with Gitlab",
+    path: "gitlab.png",
+  },
+  {
+    label: "Sign in with SSO",
+    path: "key.png",
+  },
+];
+
+
+
+export const metricsData = [
+  {
+    heading: "30+",
+    subheading: "Langauges Support",
+  },
+  {
+    heading: "10K+",
+    subheading: "Developers",
+  },
+  {
+    heading: "100K+",
+    subheading: "Hours Saved",
+  },
+];
 
 export const navbarLinks = [
     {
@@ -41,7 +87,7 @@ export const navbarLinks = [
     {
         label: "Logout",
         icon: MdOutlineLogout,
-        path: "/logout",
+        path: "/auth",
     },
 ];
 
