@@ -1,6 +1,6 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Layout from "./routes/layout";
-import DashboardPage from "./routes/dashboard/page";
+import Repositories from "./routes/repositories/page";
 
 function App() {
   const router = createBrowserRouter([
@@ -10,7 +10,7 @@ function App() {
         children: [
             {
                 index: true,
-                element: <DashboardPage />,
+                element: <Repositories />,
             },
             {
                 path: "review",

@@ -21,7 +21,7 @@ export const Sidebar = () => {
           CodeAnt AI
         </p>
       </div>
-      <nav className="flex min-h-screen w-full flex-col  overflow-x-hidden p-4 [scrollbar-width:_thin] 
+      <nav className="flex h-[calc(100vh-64px)]  w-full flex-col p-4  
       ">
           {navbarLinks.map((link, index) => (
             <Tab
