@@ -159,3 +159,14 @@ export const repositories = [
         updates: "3",
     },
 ];
+
+export const dummyUsers = [
+  {
+    value: "Tirthankar03",
+    label: "Tirthankar",
+  },
+  {
+    value: "utkarshdhairyapanwar",
+    label: "Utkarsh Dhairya Panwar",
+  },
+];

@@ -1,6 +1,7 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Layout from "./routes/layout";
 import Repositories from "./routes/repositories/page";
+import WorkInProgress from "./components/WorkInProgress";
 
 function App() {
   const router = createBrowserRouter([
@@ -14,27 +15,27 @@ function App() {
             },
             {
                 path: "review",
-                element: <h1 className="title">AI Code Review</h1>,
+                element: <WorkInProgress />,
             },
             {
                 path: "cloud-security",
-                element: <h1 className="title">Cloud Security</h1>,
+                element: <WorkInProgress />,
             },
             {
                 path: "how-to-use",
-                element: <h1 className="title">How to use</h1>,
+                element: <WorkInProgress />,
             },
             {
                 path: "settings",
-                element: <h1 className="title">Settings</h1>,
+                element: <WorkInProgress />,
             },
             {
                 path: "support",
-                element: <h1 className="title">Support</h1>,
+                element: <WorkInProgress />,
             },
             {
                 path: "logout",
-                element: <h1 className="title">Logout</h1>,
+                element: <WorkInProgress />,
             },
 
         ],

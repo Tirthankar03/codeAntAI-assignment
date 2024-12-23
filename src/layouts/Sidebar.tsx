@@ -1,18 +1,18 @@
-// import { NavLink } from "react-router-dom";
-// import { cn } from "../lib/utils"
+
 
 import Tab from "@/components/Tab";
-import { navbarLinks } from "@/constants";
-
-// import { forwardRef, HTMLAttributes } from "react"
-// import { navbarLinks } from "../constants";
-// interface SidebarProps extends HTMLAttributes<HTMLElement> {
-//     collapsed?: boolean;
-// }
-
-// export const Sidebar = forwardRef<HTMLElement, SidebarProps>(({ collapsed }, ref) => {
+import { dummyUsers, navbarLinks } from "@/constants";
+import React from 'react';
+import { useDispatch } from 'react-redux';
+import { setUsername } from '../store/userSlice';
 
 export const Sidebar = () => {
+  const dispatch = useDispatch();
+
+  const handleUsernameChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+    dispatch(setUsername(event.target.value));
+  };
+
   return (
     <aside className="hidden bg-white md:block">
       <div className="flex gap-x-3 mt-6 mx-5">
@@ -21,8 +21,22 @@ export const Sidebar = () => {
           CodeAnt AI
         </p>
       </div>
-      <nav className="flex h-[calc(100vh-64px)]  w-full flex-col p-4  
-      ">
+
+    <div className=" mx-5 mt-5 ">
+            <select
+              className="w-full outline-none h-full p-2  bg-white border  rounded-md"
+              onChange={handleUsernameChange}
+            >
+              {dummyUsers.map((user) => (
+                <option value={user.value} key={user.value}>
+                  {user.label}
+                </option>
+              ))}
+            </select>
+          </div>
+
+      <nav className="flex h-[calc(100vh-128px)]  w-full flex-col p-4  
+        ">
           {navbarLinks.map((link, index) => (
             <Tab
               key={link.label}
@@ -33,6 +47,7 @@ export const Sidebar = () => {
             />
           ))}
       </nav>
+
     </aside>
   );
 };
